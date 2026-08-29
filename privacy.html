@@ -91,7 +91,7 @@ footer.site .wrap { padding: 1.5rem 1.25rem 3rem; }
 </ul>
 <hr>
 <h2>What Baby Steps stores, and where</h2>
-<p>Everything you enter is written to a private database inside the app's own storage on your device. Android protects that storage so other apps cannot read it.</p>
+<p>Everything you enter is written to a private database inside the app's own storage on your device. Both platforms protect that storage so other apps cannot read it: Android through app-private storage, an iPhone through the app's sandbox.</p>
 <p>What is stored:</p>
 <div class="tablewrap"><table><thead><tr>
 <th>Information</th>
@@ -111,15 +111,19 @@ footer.site .wrap { padding: 1.5rem 1.25rem 3rem; }
 </tr>
 <tr>
 <td>How your baby is fed, when it changed, and when solids started</td>
-<td>Asked during setup and editable later. It is context for the growth chart and for what a doctor may ask at a visit. Not shared, and not used for anything else.</td>
+<td>Asked during setup and editable later, and more than one way can be true at once. It is context for the growth chart and for what a doctor may ask at a visit. Not shared, and not used for anything else. The app does not record individual feeds.</td>
 </tr>
 <tr>
-<td>Individual feeds you choose to log</td>
-<td>Optional. The time, whether it was breast, bottle or solids, and — if you enter them — the side, the amount and how long it took. Kept so you can answer "when was the last feed?" without relying on memory.</td>
+<td>How your child seems, if you note it</td>
+<td>Optional. One of six words — happy, settled, sleepy, fussy, clingy, off colour — and when you noted it. It is your own note: it creates no task, no reminder and no alert, and nothing in the app treats it as a medical finding.</td>
 </tr>
 <tr>
 <td>Pediatrician and clinic details</td>
 <td>So they are to hand at an appointment.</td>
+</tr>
+<tr>
+<td>Emergency contacts, if you add any</td>
+<td>A name, how they are related to your child, and a phone number — all typed by you. Baby Steps does <strong>not</strong> read your phone's contacts, does not dial anyone, and never uploads these. They are there so whoever is holding your phone knows who to call.</td>
 </tr>
 <tr>
 <td>Doctor visits, questions, diagnoses, notes, follow-ups</td>
@@ -150,8 +154,12 @@ footer.site .wrap { padding: 1.5rem 1.25rem 3rem; }
 <td>Only to suggest kinder medication times. This is a setting, not a sleep tracker.</td>
 </tr>
 <tr>
-<td>Your acceptance of this policy and the medical disclaimer, and when</td>
-<td>So we can show you what you agreed to, and ask again if the wording changes.</td>
+<td>Your own name, how you are related to the child, and a phone number if you add one</td>
+<td>Asked at setup so the record of your consent can say who gave it, and editable later under More → About you. Nothing dials the number; it is there for your own reference.</td>
+</tr>
+<tr>
+<td>Your acceptance of this policy and the medical disclaimer, when, and who accepted it</td>
+<td>So we can show you what you agreed to, and ask again if the wording changes. Agreements recorded before the app asked for your name are shown as "not recorded" rather than filled in afterwards.</td>
 </tr>
 <tr>
 <td>App settings: your theme choice and unit preference</td>
@@ -163,42 +171,63 @@ footer.site .wrap { padding: 1.5rem 1.25rem 3rem; }
 <h2>What Baby Steps does <em>not</em> do</h2>
 <ul>
 <li>It does not create an account or a profile on any server.</li>
-<li>It does not upload, back up or synchronise your data anywhere. Android's own automatic backup to Google Drive is switched <strong>off</strong> for this app, so your child's records are not copied there either — not even by the operating system.</li>
+<li>It does not upload, back up or synchronise your data anywhere, and it switches off the operating system's own backup so that the phone cannot do it either: Android's automatic backup to Google Drive is disabled for this app, and on an iPhone the records are excluded from iCloud and from encrypted computer backups. Your child's records are not copied anywhere — not even by the operating system.</li>
+</ul>
+<p>  <strong>This cuts both ways, and you should know which way.</strong> Because nothing is backed up, a lost or reset phone takes the records with it. The app's <em>Export everything</em> (More → Data and privacy) is how you keep a copy, and it is the only way there is.</p>
+<ul>
 <li>It does not use analytics or crash-reporting services.</li>
 <li>It does not contain advertising, and does not use health data for marketing.</li>
-<li>It does not read your contacts, your photo library, your location or your microphone.</li>
+<li>It does not read your contacts, your photo library, your location or your microphone. On an iPhone it asks for the camera, and only to take a photo you asked it to take — see <em>Permissions</em> below.</li>
 </ul>
 <hr>
 <h2>Permissions, and why each one exists</h2>
 <p>Baby Steps asks for as little as it can.</p>
 <div class="tablewrap"><table><thead><tr>
 <th>Permission</th>
+<th>Where</th>
 <th>What it is for</th>
 </tr></thead><tbody>
 <tr>
 <td><strong>Notifications</strong></td>
+<td>Android and iPhone</td>
 <td>To show medication and vaccine reminders.</td>
 </tr>
 <tr>
 <td><strong>Alarms and reminders</strong> (exact alarms)</td>
-<td>So a dose reminder arrives at the dose time rather than whenever the system gets round to it.</td>
+<td>Android only</td>
+<td>So a dose reminder arrives at the dose time rather than whenever the system gets round to it. iPhones have no equivalent setting; a reminder there arrives at the time it was set for.</td>
 </tr>
 <tr>
 <td><strong>Run at startup</strong></td>
+<td>Android only</td>
 <td>Reminders are cleared by a restart. Without this, restarting your phone would silently stop your reminders.</td>
 </tr>
 <tr>
 <td><strong>Vibrate</strong></td>
+<td>Android only</td>
 <td>Part of how a reminder notification is delivered. Added by the notification library the app uses.</td>
 </tr>
+<tr>
+<td><strong>Camera</strong></td>
+<td>iPhone only</td>
+<td>Asked for the first time you tap <strong>Take a photo</strong>, and only then. See below — this is the one place the two platforms genuinely differ.</td>
+</tr>
+<tr>
+<td><strong>Time-sensitive notifications</strong></td>
+<td>iPhone only</td>
+<td>So a dose reminder is delivered while a Focus — including Sleep — is switched on. Not a prompt: it is granted with notifications, and you can switch it off per app in Settings.</td>
+</tr>
 </tbody></table></div>
-<p>Baby Steps does <strong>not</strong> request camera or photo-library permissions, and does not have access to your photo library.</p>
-<p>When you attach a photo you can either pick an existing one or take a new one:</p>
+<p><strong>Baby Steps never has access to your photo library</strong>, on either platform, and never asks for it.</p>
+<p>When you add a photo — an attachment on a visit or vaccination, or a profile picture for your child — you can either pick an existing one or take a new one:</p>
 <ul>
-<li><strong>Choosing an existing photo</strong> opens the Android photo picker, which hands the app the single file you chose and nothing else.</li>
-<li><strong>Taking a photo</strong> opens your phone's own camera app, which returns just the photo you took. Baby Steps never sees the camera itself, which is why no camera permission is needed.</li>
+<li><strong>Choosing an existing photo</strong> opens the phone's own photo picker — Android's photo picker, or the iPhone's Photos picker. Both run outside the app and hand it the single file you chose and nothing else. Neither needs, or asks for, permission to your library. The app also deliberately declines the picture's embedded metadata, so the location the photo was taken at is not copied in with it.</li>
+<li><strong>Taking a photo</strong> differs, and this policy would rather say so than round it off:</li>
+<li>On <strong>Android</strong>, it opens your phone's own camera app, which returns just the photo you took. Baby Steps never sees the camera, which is why no camera permission is asked for and none is declared.</li>
+<li>On <strong>iPhone</strong>, the camera runs inside the app, and iOS requires your permission for that. You will be asked once, the first time you tap Take a photo, and you can refuse — everything else in the app keeps working, and you can still attach a photo you have already taken. The camera is opened at no other moment.</li>
 </ul>
-<p>Either way, only that one file is copied into the app's own storage.</p>
+<p>Either way, only that one file is copied into the app's own storage. A profile picture is scaled down to at most 512 pixels on its longest side before it is copied, because it is only ever drawn small.</p>
+<p>Everything copied in is included when you export, and removed when you delete the child it belongs to or delete everything.</p>
 <hr>
 <h2>Children's data</h2>
 <p>Baby Steps holds health information about children, which both Egypt's Personal Data Protection Law (No. 151 of 2020) and the GDPR treat as sensitive.</p>
