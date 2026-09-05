@@ -8,23 +8,23 @@
 <meta name="robots" content="index, follow">
 <style>
 :root {
-  --bg: #fdfcfa;
-  --surface: #ffffff;
-  --ink: #2f3b36;
-  --muted: #5f6f68;
-  --line: #e2e8e4;
-  --accent: #4a8577;
-  --accent-ink: #2c5a4e;
+  --bg: #f3faff;            /* AppColors.lightSurface */
+  --surface: #ffffff;       /* AppColors.lightSurfaceContainerLowest */
+  --ink: #021f29;           /* AppColors.lightOnSurface */
+  --muted: #4d4634;         /* AppColors.lightOnSurfaceVariant */
+  --line: #cbe7f5;          /* AppColors.lightSurfaceContainerHighest */
+  --accent: #ffd54f;        /* AppColors.lightPrimaryContainer */
+  --accent-ink: #735c00;    /* AppColors.lightPrimary */
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #14181a;
-    --surface: #1c2225;
-    --ink: #e6ece9;
-    --muted: #9fb0a9;
-    --line: #2b3438;
-    --accent: #7fbfae;
-    --accent-ink: #a8d8c9;
+    --bg: #0d1a20;          /* AppColors.darkSurface */
+    --surface: #172329;     /* AppColors.darkSurfaceContainer */
+    --ink: #dff4ff;         /* AppColors.darkOnSurface */
+    --muted: #d0c6ae;       /* AppColors.darkOnSurfaceVariant */
+    --line: #212d34;        /* AppColors.darkSurfaceContainerHigh */
+    --accent: #574400;      /* AppColors.darkPrimaryContainer */
+    --accent-ink: #ebc23e;  /* AppColors.darkPrimary */
   }
 }
 * { box-sizing: border-box; }
@@ -76,8 +76,8 @@ footer.site .wrap { padding: 1.5rem 1.25rem 3rem; }
 </div></header>
 <main class="wrap">
 <h1>Baby Steps — Privacy Policy</h1>
-<p><strong>Last updated: 26 August 2026</strong></p>
-<p>Baby Steps is an app for keeping track of a child's health: doctor visits, vaccinations, medications, growth, teeth, symptoms and reminders.</p>
+<p><strong>Last updated: 5 September 2026</strong></p>
+<p>Baby Steps is an app for keeping track of a child's health: doctor visits, vaccinations, medications, growth, teeth, symptoms, the papers a clinic hands you, and reminders.</p>
 <p>This policy describes what happens to the information you put into it. It is short because the app does very little with your data — by design.</p>
 <hr>
 <h2>The short version</h2>
@@ -118,14 +118,6 @@ footer.site .wrap { padding: 1.5rem 1.25rem 3rem; }
 <td>Optional. One of six words — happy, settled, sleepy, fussy, clingy, off colour — and when you noted it. It is your own note: it creates no task, no reminder and no alert, and nothing in the app treats it as a medical finding.</td>
 </tr>
 <tr>
-<td>Pediatrician and clinic details</td>
-<td>So they are to hand at an appointment.</td>
-</tr>
-<tr>
-<td>Emergency contacts, if you add any</td>
-<td>A name, how they are related to your child, and a phone number — all typed by you. Baby Steps does <strong>not</strong> read your phone's contacts, does not dial anyone, and never uploads these. They are there so whoever is holding your phone knows who to call.</td>
-</tr>
-<tr>
 <td>Doctor visits, questions, diagnoses, notes, follow-ups</td>
 <td>The visit record.</td>
 </tr>
@@ -146,8 +138,20 @@ footer.site .wrap { padding: 1.5rem 1.25rem 3rem; }
 <td>The to-do list.</td>
 </tr>
 <tr>
-<td>Photos you attach to a visit or a vaccination</td>
-<td>Prescriptions, certificates and lab results. Copied into the app's own storage.</td>
+<td>Photos of papers you file — prescriptions, lab results, scans, clinical notes — with the title you give each one, which kind of paper it is, the date printed on it, and which visit or health episode it belongs to</td>
+<td>The medical reports shelf, so a prescription can be found again without going through a camera roll. The picture is copied into the app's own storage. <strong>Baby Steps does not read the page</strong>: nothing is extracted from it, and every one of those details is one you typed or chose.</td>
+</tr>
+<tr>
+<td>Health episodes: a name for a stretch of illness, when it started and ended, and your notes on it</td>
+<td>So the papers, visits and symptoms belonging to one illness are filed together rather than scattered by date.</td>
+</tr>
+<tr>
+<td>Medical history: allergies, chronic conditions, past illnesses and surgeries, and whether you marked one serious</td>
+<td>The history a doctor asks for at the start of a visit. Anything you marked serious is shown first on your child's profile, so somebody holding the phone can see it.</td>
+</tr>
+<tr>
+<td>Development milestones you tick off, and when</td>
+<td>Your own record against published checklists. **Nothing records that a milestone was <em>not</em> reached** — there is no "not yet" and no failed state, because an empty box means nobody has said anything, which is not a claim about a child.</td>
 </tr>
 <tr>
 <td>Optional routine times (usual wake-up and bedtime)</td>
